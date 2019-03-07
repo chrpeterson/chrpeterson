@@ -7,19 +7,23 @@
     <style>
     
       
-        #diagram {
-            width: 100%;
-            position: fixed;
-        }
-        
-        .diagram {
-            width: 80%;
-            margin-top: 100px;
-        }
+      #flex {
+  display: flex;
+  justify-content: center;
+}
+ 
+.diagram {
+  max-width: 80%;
+  position: absolute;
+  top: 0;
+}
     </style>
 <body style='margin : 0px; overflow: hidden;'>
-    <div id="diagram"><img class="diagram" src="https://h22208.www2.hpe.com/eginfolib/ar/AR/Moab_078AR.png"></div>
+    
  
+    <div id="flex">
+<img class="diagram" src="https://h22208.www2.hpe.com/eginfolib/ar/AR/Moab_078AR.png">
+</div>
     
     <a-scene embedded arjs>
        
