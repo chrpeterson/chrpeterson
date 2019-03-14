@@ -1,0 +1,32 @@
+<html lang="en-us">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=11" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- a-frame.js from https://aframe.io -->
+	<script src="aframe.min.js"></script>
+	<!-- a-frame.ar.js from https://jeromeetienne.github.io/ -->
+	<script src="aframe-ar.js"></script>
+  <style>
+    #flex {
+      display: flex;
+      justify-content: center;
+    }
+    .diagram {
+      max-width: 80%;
+      position: absolute;
+      top: 0;
+    }
+    #arjsDebugUIContainer, .a-enter-vr.embedded {
+      Position: absolute;
+      Left: -9999px;
+    }
+  </style>
+<body style='margin : 0px; overflow: hidden;'>
+  <p id="flex">
+    <img class="diagram" src="Mob_125AR.png">
+  </p>
+  <a-scene embedded arjs>
+    <a-marker-camera></a-marker-camera>
+  </a-scene>
+</body>
+</html>
