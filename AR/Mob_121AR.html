@@ -2,6 +2,7 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=11" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
   <!-- include A-Frame obviously -->
   <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
   <!-- include ar.js for A-Frame -->
@@ -24,43 +25,26 @@
       Left: -9999px;
     }
     
+	  
+	  ::-webkit-scrollbar-btton {
+	  width: 0px;
+	  height: 0px;
+	  }
+	  
+	  ::-webkit-scrollbar-thumb{
+	  background: #2A6580;
+	  border: 0px none #2A65B0;
+	  border-radius: 50px;}
+	  
+	  ::-webkit-scrollbar-thumb:hover {
+	  background: #4c88e8;
+	  }
+	  
+	  ::-webkit-scrollbar-thumb:active {
+	  background: #4a7ccc;
+	  }
     
-    :-webkit-full-screen body,
-:-moz-full-screen body,
-:-ms-fullscreen body {
-	/* properties */
-	width: 100vw;
-	height: 100vh;
-}
 
-:full-screen body {
-	/*pre-spec */
-	/* properties */
-	width: 100vw;
-	height: 100vh;
-}
-
-:fullscreen body {
-	/* spec */
-	/* properties */
-	width: 100vw;
-	height: 100vh;
-}
-
-/* deeper elements */
-
-:-webkit-full-screen body {
-	width: 100vw;
-	height: 100vh;
-}
-
-/* styling the backdrop*/
-
-::backdrop,
-::-ms-backdrop {
-	/* Custom styles */
-}
-    
   </style>
 <body style='margin : 0px; overflow: hidden;'>
   <p id="flex">
@@ -71,72 +55,6 @@
   </a-scene>
 	
 	
-	<scrip>
-		const _toggleFullScreen = function _toggleFullScreen() {
-	if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement) {
-		if (document.cancelFullScreen) {
-			document.cancelFullScreen();
-		} else {
-			if (document.mozCancelFullScreen) {
-				document.mozCancelFullScreen();
-			} else {
-				if (document.webkitCancelFullScreen) {
-					document.webkitCancelFullScreen();
-				}
-			}
-		}
-	} else {
-		const _element = document.documentElement;
-		if (_element.requestFullscreen) {
-			_element.requestFullscreen();
-		} else {
-			if (_element.mozRequestFullScreen) {
-				_element.mozRequestFullScreen();
-			} else {
-				if (_element.webkitRequestFullscreen) {
-					_element.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-				}
-			}
-		}
-	}
-};
 	
-		</script>
-	
-	<script>
-		
-		const userAgent = window.navigator.userAgent;
-
-	const iPadSafari =
-		!!userAgent.match(/iPad/i) &&  		// Detect iPad first.
-		!!userAgent.match(/WebKit/i) && 	// Filter browsers with webkit engine only
-		!userAgent.match(/CriOS/i) &&		// Eliminate Chrome & Brave
-		!userAgent.match(/OPiOS/i) &&		// Rule out Opera
-		!userAgent.match(/FxiOS/i) &&		// Rule out Firefox
-		!userAgent.match(/FocusiOS/i);		// Eliminate Firefox Focus as well!
-
-	const element = document.getElementById('fullScreenButton');
-
-	function iOS() {
-		if (userAgent.match(/ipad|iphone|ipod/i)) {
-			const iOS = {};
-			iOS.majorReleaseNumber = +userAgent.match(/OS (\d)?\d_\d(_\d)?/i)[0].split('_')[0].replace('OS ', '');
-			return iOS;
-		}
-	}
-
-	if (element !== null) {
-		if (userAgent.match(/iPhone/i) || userAgent.match(/iPod/i)) {
-			element.className += ' hidden';
-		} else if (userAgent.match(/iPad/i) && iOS().majorReleaseNumber < 12) {
-			element.className += ' hidden';
-		} else if (userAgent.match(/iPad/i) && !iPadSafari) {
-			element.className += ' hidden';
-		} else {
-			element.addEventListener('click', _toggleFullScreen, false);
-		}
-	}
-		
-	</script>
 </body>
 </html>
