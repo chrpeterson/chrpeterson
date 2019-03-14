@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>2SFF backplane to system board</title></head><body id="GUID-17FDAAE5-DB57-4005-B120-76A26237B9CE"><a name="GUID-17FDAAE5-DB57-4005-B120-76A26237B9CE"><!-- --></a><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">2SFF backplane to system board</h1><div class="body refbody"><section class="section" id="GUID-17FDAAE5-DB57-4005-B120-76A26237B9CE__GUID-6D8F2943-80F8-444B-BEAC-40580829490F"><a name="GUID-17FDAAE5-DB57-4005-B120-76A26237B9CE__GUID-6D8F2943-80F8-444B-BEAC-40580829490F"><!-- --></a> 
+		<figure class="fig fignone" id="GUID-17FDAAE5-DB57-4005-B120-76A26237B9CE__GUID-642D43FA-D308-4533-B87F-B2A95034E6E5"><a name="GUID-17FDAAE5-DB57-4005-B120-76A26237B9CE__GUID-642D43FA-D308-4533-B87F-B2A95034E6E5"><!-- --></a><br><a name="GUID-17FDAAE5-DB57-4005-B120-76A26237B9CE__IMAGE_61DDFFCE516A4689B4E79DADC363BC36"><!-- --></a><img class="image" id="GUID-17FDAAE5-DB57-4005-B120-76A26237B9CE__IMAGE_61DDFFCE516A4689B4E79DADC363BC36" src="hufl_027.png"><br></figure> 
+		<p class="p text-center"><a class="xref btn" href="">Launch AR template</a> 
+		</p> 
+	 </section></div></article></main><script>
+            (function (document) {
+            'use strict';
+            var TableFilter = (function (Arr) {
+            var _input;
+
+            function
+            _onInputEvent(e) {
+            _input = e.target;
+            var tables =
+            document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
+            Arr.forEach.call(tbody.rows, _filter);
+            }
+            );
+            });
+            }
+
+            function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display =
+            text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+            init: function () {
+            var inputs = document.getElementsByClassName('tableFilter');
+            Arr.forEach.call(inputs, function (input) {
+            input.oninput = _onInputEvent;
+            }
+            );
+            }
+            };
+            })(Array.prototype);
+            document.addEventListener('readystatechange', function () {
+            if
+            (document.readyState === 'complete') {
+            TableFilter.init();
+            }
+            });
+            })(document);
+        </script></body></html>

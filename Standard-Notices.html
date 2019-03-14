@@ -1,0 +1,53 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>Notices</title></head><body id="GUID-F2B75FD1-BAB0-4E35-BD4A-D3C0A3386D25"><a name="GUID-F2B75FD1-BAB0-4E35-BD4A-D3C0A3386D25"><!-- --></a><main role="main"><article role="article" aria-labelledby="GUID-F2B75FD1-BAB0-4E35-BD4A-D3C0A3386D25__GUID-D0843C9E-4401-4784-80C4-1F85C80CC0BA"><h1 class="title topictitle1" id="GUID-F2B75FD1-BAB0-4E35-BD4A-D3C0A3386D25__GUID-D0843C9E-4401-4784-80C4-1F85C80CC0BA">Notices</h1><div class="body refbody"><section class="section" id="GUID-F2B75FD1-BAB0-4E35-BD4A-D3C0A3386D25__GUID-390DB112-CA63-4A3C-A2D3-918F80704C21"><a name="GUID-F2B75FD1-BAB0-4E35-BD4A-D3C0A3386D25__GUID-390DB112-CA63-4A3C-A2D3-918F80704C21"><!-- --></a> 
+		<p class="p">The information contained herein is subject to change without notice. The only warranties for Hewlett Packard Enterprise products and services are set forth in the express warranty statements accompanying such products and services. Nothing herein should be construed as constituting an additional warranty. Hewlett Packard Enterprise shall not be liable for technical or editorial errors or omissions contained herein. 
+		</p> 
+		<p class="p">Confidential computer software. Valid license from Hewlett Packard Enterprise required for possession, use, or copying. Consistent with FAR 12.211 and 12.212, Commercial Computer Software, Computer Software Documentation, and Technical Data for Commercial Items are licensed to the U.S. Government under vendor's standard commercial license. 
+		</p> 
+	 </section><section class="section" id="GUID-F2B75FD1-BAB0-4E35-BD4A-D3C0A3386D25__GUID-69125B93-F953-4509-A05F-22145CB09C86"><a name="GUID-F2B75FD1-BAB0-4E35-BD4A-D3C0A3386D25__GUID-69125B93-F953-4509-A05F-22145CB09C86"><!-- --></a> 
+		<p class="p">Links to third-party websites take you outside the Hewlett Packard Enterprise website. Hewlett Packard Enterprise has no control over and is not responsible for information outside the Hewlett Packard Enterprise website. 
+		</p> 
+	 </section></div></article></main><script>
+            (function (document) {
+            'use strict';
+            var TableFilter = (function (Arr) {
+            var _input;
+
+            function
+            _onInputEvent(e) {
+            _input = e.target;
+            var tables =
+            document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
+            Arr.forEach.call(tbody.rows, _filter);
+            }
+            );
+            });
+            }
+
+            function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display =
+            text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+            init: function () {
+            var inputs = document.getElementsByClassName('tableFilter');
+            Arr.forEach.call(inputs, function (input) {
+            input.oninput = _onInputEvent;
+            }
+            );
+            }
+            };
+            })(Array.prototype);
+            document.addEventListener('readystatechange', function () {
+            if
+            (document.readyState === 'complete') {
+            TableFilter.init();
+            }
+            });
+            })(document);
+        </script></body></html>

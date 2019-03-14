@@ -1,0 +1,57 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>HPE ProLiant Gen10 DL Servers Storage Cabling Guidelines</title></head><body id="GUID-6057B072-D2FE-4118-BD1B-B0278502D2E8"><a name="GUID-6057B072-D2FE-4118-BD1B-B0278502D2E8"><!-- --></a><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">HPE ProLiant Gen10 DL Servers Storage Cabling Guidelines</h1><div class="body refbody"><section class="section" id="GUID-6057B072-D2FE-4118-BD1B-B0278502D2E8__SECTION_AE2A20AD3EE847CF8FEE68F9EC30B809"><a name="GUID-6057B072-D2FE-4118-BD1B-B0278502D2E8__SECTION_AE2A20AD3EE847CF8FEE68F9EC30B809"><!-- --></a> 
+		<p class="p">When installing cables, observe the following: 
+		</p> 
+		<ul class="ul"><li class="li">All ports are labeled: 
+			 <ul class="ul"><li class="li">System board ports 
+				</li><li class="li">Controller ports 
+				</li><li class="li">12G SAS Expander ports 
+				</li></ul></li><li class="li">Most data cables have labels near each connector with destination port information. 
+		  </li><li class="li">Some data cables are pre-bent. Do not unbend or manipulate the cables. 
+		  </li><li class="li">Before connecting a cable to a port, lay the cable in place to verify the length of the cable. 
+		  </li><li class="li">When routing cables from the front to the rear of the server, use the cable channels on either side of the chassis. 
+		  </li></ul> 
+	 </section></div></article></main><script>
+            (function (document) {
+            'use strict';
+            var TableFilter = (function (Arr) {
+            var _input;
+
+            function
+            _onInputEvent(e) {
+            _input = e.target;
+            var tables =
+            document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
+            Arr.forEach.call(tbody.rows, _filter);
+            }
+            );
+            });
+            }
+
+            function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display =
+            text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+            init: function () {
+            var inputs = document.getElementsByClassName('tableFilter');
+            Arr.forEach.call(inputs, function (input) {
+            input.oninput = _onInputEvent;
+            }
+            );
+            }
+            };
+            })(Array.prototype);
+            document.addEventListener('readystatechange', function () {
+            if
+            (document.readyState === 'complete') {
+            TableFilter.init();
+            }
+            });
+            })(document);
+        </script></body></html>

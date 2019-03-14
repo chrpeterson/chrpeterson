@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>Optical disk drive cable routing (SFF/LFF)</title></head><body id="GUID-76576101-4B43-416A-B119-A1F9C57892C2"><a name="GUID-76576101-4B43-416A-B119-A1F9C57892C2"><!-- --></a><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Optical disk drive cable routing (SFF/LFF)</h1><div class="body refbody"><section class="section" id="GUID-76576101-4B43-416A-B119-A1F9C57892C2__GUID-6983D5C3-C158-43CB-9829-987FB7C9EE32"><a name="GUID-76576101-4B43-416A-B119-A1F9C57892C2__GUID-6983D5C3-C158-43CB-9829-987FB7C9EE32"><!-- --></a>
+		<p class="p">SFF
+		</p> 
+		<figure class="fig fignone" id="GUID-76576101-4B43-416A-B119-A1F9C57892C2__FIG_8DB44A607E784B6492DEBF7C9A896AA5"><a name="GUID-76576101-4B43-416A-B119-A1F9C57892C2__FIG_8DB44A607E784B6492DEBF7C9A896AA5"><!-- --></a><br><a name="GUID-76576101-4B43-416A-B119-A1F9C57892C2__IMAGE_5813A4D6DA604E57BD3DCB9F6C73D77C"><!-- --></a><img class="image" id="GUID-76576101-4B43-416A-B119-A1F9C57892C2__IMAGE_5813A4D6DA604E57BD3DCB9F6C73D77C" src="hufl_115.png"><br></figure>
+		<p class="p">LFF
+		</p>
+		<figure class="fig fignone" id="GUID-76576101-4B43-416A-B119-A1F9C57892C2__FIG_8141882A3C4E469EB9B8C4CB361C30C3"><a name="GUID-76576101-4B43-416A-B119-A1F9C57892C2__FIG_8141882A3C4E469EB9B8C4CB361C30C3"><!-- --></a><br><a name="GUID-76576101-4B43-416A-B119-A1F9C57892C2__IMAGE_CE38B17A8DBD47868A5B59B1656E0E0F"><!-- --></a><img class="image" id="GUID-76576101-4B43-416A-B119-A1F9C57892C2__IMAGE_CE38B17A8DBD47868A5B59B1656E0E0F" src="hufl_106.png"><br></figure>
+	 </section></div></article></main><script>
+            (function (document) {
+            'use strict';
+            var TableFilter = (function (Arr) {
+            var _input;
+
+            function
+            _onInputEvent(e) {
+            _input = e.target;
+            var tables =
+            document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
+            Arr.forEach.call(tbody.rows, _filter);
+            }
+            );
+            });
+            }
+
+            function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display =
+            text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+            init: function () {
+            var inputs = document.getElementsByClassName('tableFilter');
+            Arr.forEach.call(inputs, function (input) {
+            input.oninput = _onInputEvent;
+            }
+            );
+            }
+            };
+            })(Array.prototype);
+            document.addEventListener('readystatechange', function () {
+            if
+            (document.readyState === 'complete') {
+            TableFilter.init();
+            }
+            });
+            })(document);
+        </script></body></html>

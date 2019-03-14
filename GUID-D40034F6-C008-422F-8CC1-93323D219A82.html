@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>8 SFF backplane to a P408i-a/P816i-a controller</title></head><body id="GUID-D40034F6-C008-422F-8CC1-93323D219A82"><a name="GUID-D40034F6-C008-422F-8CC1-93323D219A82"><!-- --></a><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">8 SFF backplane to a P408i-a/P816i-a controller</h1><div class="body refbody"><section class="section" id="GUID-D40034F6-C008-422F-8CC1-93323D219A82__GUID-14870BE1-E34D-4633-8B2B-6EED989AEE92"><a name="GUID-D40034F6-C008-422F-8CC1-93323D219A82__GUID-14870BE1-E34D-4633-8B2B-6EED989AEE92"><!-- --></a> 
+		<p class="p">A P408i-a controller is shown, but the routing is the same for the P816i-a. 
+		</p> 
+		<figure class="fig fignone" id="GUID-D40034F6-C008-422F-8CC1-93323D219A82__FIG_686E2F6850174564B9F77C30007AA8C3"><a name="GUID-D40034F6-C008-422F-8CC1-93323D219A82__FIG_686E2F6850174564B9F77C30007AA8C3"><!-- --></a><a name="GUID-D40034F6-C008-422F-8CC1-93323D219A82__IMAGE_0E6F318251594658A8A9A5E43B3D475D"><!-- --></a><img class="image" id="GUID-D40034F6-C008-422F-8CC1-93323D219A82__IMAGE_0E6F318251594658A8A9A5E43B3D475D" src="hufl_109.png" alt="8 SFF backplane to P408i-a controller"></figure> 
+	 </section></div></article></main><script>
+            (function (document) {
+            'use strict';
+            var TableFilter = (function (Arr) {
+            var _input;
+
+            function
+            _onInputEvent(e) {
+            _input = e.target;
+            var tables =
+            document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
+            Arr.forEach.call(tbody.rows, _filter);
+            }
+            );
+            });
+            }
+
+            function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display =
+            text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+            init: function () {
+            var inputs = document.getElementsByClassName('tableFilter');
+            Arr.forEach.call(inputs, function (input) {
+            input.oninput = _onInputEvent;
+            }
+            );
+            }
+            };
+            })(Array.prototype);
+            document.addEventListener('readystatechange', function () {
+            if
+            (document.readyState === 'complete') {
+            TableFilter.init();
+            }
+            });
+            })(document);
+        </script></body></html>

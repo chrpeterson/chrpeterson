@@ -1,0 +1,50 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>HPE ProLiant Gen10 Cabling Matrix</title></head><body id="GUID-6FAA86F2-B698-4F4F-BAEC-6140842AB518"><a name="GUID-6FAA86F2-B698-4F4F-BAEC-6140842AB518"><!-- --></a><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">HPE ProLiant Gen10 Cabling Matrix</h1><div class="body conbody"><p class="p">Select your server. 
+	 </p><p class="p"><a class="xref btn" href="GUID-EB60F7E5-666E-477D-B5BE-7AE176E7AE8E.html" target="_blank">HPE ProLiant DL360</a> 
+	 </p><p class="p"><a class="xref btn" href="GUID-2F1298D0-F2B9-422C-95B7-92B18F63286D.html" target="_blank">HPE ProLiant DL380</a> 
+	 </p><p class="p"><a class="xref btn" href="GUID-B6A482FF-2D35-4BB5-AC02-2B100CAD33A4.html" target="_blank">HPE ProLiant DL385</a> 
+	 </p><p class="p">*Internet Explorer is not supported. 
+	 </p></div></article></main><script>
+            (function (document) {
+            'use strict';
+            var TableFilter = (function (Arr) {
+            var _input;
+
+            function
+            _onInputEvent(e) {
+            _input = e.target;
+            var tables =
+            document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
+            Arr.forEach.call(tbody.rows, _filter);
+            }
+            );
+            });
+            }
+
+            function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display =
+            text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+            init: function () {
+            var inputs = document.getElementsByClassName('tableFilter');
+            Arr.forEach.call(inputs, function (input) {
+            input.oninput = _onInputEvent;
+            }
+            );
+            }
+            };
+            })(Array.prototype);
+            document.addEventListener('readystatechange', function () {
+            if
+            (document.readyState === 'complete') {
+            TableFilter.init();
+            }
+            });
+            })(document);
+        </script></body></html>

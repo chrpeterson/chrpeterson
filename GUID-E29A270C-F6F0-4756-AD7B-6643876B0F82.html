@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>Cable routing: Front display port</title></head><body id="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82"><a name="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82"><!-- --></a><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Cable routing: Front display port</h1><div class="body refbody"><section class="section" id="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__GUID-BF855DCB-5ADB-4564-AC37-6C07DFB5D170"><a name="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__GUID-BF855DCB-5ADB-4564-AC37-6C07DFB5D170"><!-- --></a>
+			<p class="p">SFF (cable: 869804-001)
+			</p>
+			<figure class="fig fignone" id="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__FIG_5E208851AB42465C86EDD5C2C6331603"><a name="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__FIG_5E208851AB42465C86EDD5C2C6331603"><!-- --></a><br><a name="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__IMAGE_F0188F2EDA404E0D92161879282C2FFF"><!-- --></a><img class="image" id="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__IMAGE_F0188F2EDA404E0D92161879282C2FFF" src="mob_156.png"><br></figure> 
+			<p class="p">LFF (cable: 869808-001)
+			</p>
+			<figure class="fig fignone" id="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__FIG_B544826125FA475988B587C2F3456D2F"><a name="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__FIG_B544826125FA475988B587C2F3456D2F"><!-- --></a><br><a name="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__IMAGE_870EB4819E554DE9841B827DDFDD3283"><!-- --></a><img class="image" id="GUID-E29A270C-F6F0-4756-AD7B-6643876B0F82__IMAGE_870EB4819E554DE9841B827DDFDD3283" src="mob_158.png"><br></figure>
+		</section></div></article></main><script>
+            (function (document) {
+            'use strict';
+            var TableFilter = (function (Arr) {
+            var _input;
+
+            function
+            _onInputEvent(e) {
+            _input = e.target;
+            var tables =
+            document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
+            Arr.forEach.call(tbody.rows, _filter);
+            }
+            );
+            });
+            }
+
+            function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display =
+            text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+            init: function () {
+            var inputs = document.getElementsByClassName('tableFilter');
+            Arr.forEach.call(inputs, function (input) {
+            input.oninput = _onInputEvent;
+            }
+            );
+            }
+            };
+            })(Array.prototype);
+            document.addEventListener('readystatechange', function () {
+            if
+            (document.readyState === 'complete') {
+            TableFilter.init();
+            }
+            });
+            })(document);
+        </script></body></html>

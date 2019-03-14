@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>Cable routing: Front 2SFF NVMe drive option for SFF</title></head><body id="GUID-E674FB89-1223-40FE-A291-8EBD1A992BEB"><a name="GUID-E674FB89-1223-40FE-A291-8EBD1A992BEB"><!-- --></a><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Cable routing: Front 2SFF NVMe drive option for SFF</h1><div class="body refbody"><section class="section" id="GUID-E674FB89-1223-40FE-A291-8EBD1A992BEB__GUID-28683088-5209-4A7F-B784-6FF9840796B9"><a name="GUID-E674FB89-1223-40FE-A291-8EBD1A992BEB__GUID-28683088-5209-4A7F-B784-6FF9840796B9"><!-- --></a> 
+		<figure class="fig fignone" id="GUID-E674FB89-1223-40FE-A291-8EBD1A992BEB__FIG_345E1E5CDF244359B4DB1222A800BD6E"><a name="GUID-E674FB89-1223-40FE-A291-8EBD1A992BEB__FIG_345E1E5CDF244359B4DB1222A800BD6E"><!-- --></a><br><a name="GUID-E674FB89-1223-40FE-A291-8EBD1A992BEB__IMAGE_C09DA18F037B4829A56B989978A4A79A"><!-- --></a><img class="image" id="GUID-E674FB89-1223-40FE-A291-8EBD1A992BEB__IMAGE_C09DA18F037B4829A56B989978A4A79A" src="mob_138.png"><br></figure> 
+	 </section></div></article></main><script>
+            (function (document) {
+            'use strict';
+            var TableFilter = (function (Arr) {
+            var _input;
+
+            function
+            _onInputEvent(e) {
+            _input = e.target;
+            var tables =
+            document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
+            Arr.forEach.call(tbody.rows, _filter);
+            }
+            );
+            });
+            }
+
+            function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display =
+            text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+            init: function () {
+            var inputs = document.getElementsByClassName('tableFilter');
+            Arr.forEach.call(inputs, function (input) {
+            input.oninput = _onInputEvent;
+            }
+            );
+            }
+            };
+            })(Array.prototype);
+            document.addEventListener('readystatechange', function () {
+            if
+            (document.readyState === 'complete') {
+            TableFilter.init();
+            }
+            });
+            })(document);
+        </script></body></html>

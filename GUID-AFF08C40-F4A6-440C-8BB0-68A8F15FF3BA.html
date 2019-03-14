@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>Cable routing: Front 2SFF drive option for LFF</title></head><body id="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA"><a name="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA"><!-- --></a><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Cable routing: Front 2SFF drive option for LFF</h1><div class="body refbody"><section class="section" id="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__SECTION_A9A8D103DB1D4A6CA4BF6F485EAFAEED"><a name="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__SECTION_A9A8D103DB1D4A6CA4BF6F485EAFAEED"><!-- --></a> 
+		<div class="p"> 
+		  <div style="width:100%; margin-top:1em"></div><div class="notetitle"></div><div class="note note"><span style="font-weight:bold">NOTE: </span><p class="p">Some images can launch an augmented reality (AR) view. The browser uses the device's camera to overlay the cable diagram so you can verify the cable route. 
+		</p></div> 
+		</div>
+	 </section><section class="section" id="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__GUID-68411C80-CAD6-4F49-8465-99761004FB80"><a name="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__GUID-68411C80-CAD6-4F49-8465-99761004FB80"><!-- --></a><h2 class="title sectiontitle">Option 1: System board</h2>
+		 
+		<p class="p text-center"><a class="xref btn" href="AR/Mob_123AR.html" target="_blank">Launch AR template</a> 
+		</p> 
+		<figure class="fig fignone" id="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__FIG_4146591C43304CBBA258859D040071FB"><a name="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__FIG_4146591C43304CBBA258859D040071FB"><!-- --></a><br><a name="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__IMAGE_A886AA7AB6494483848AFEAE45FC22DE"><!-- --></a><div class="imagecenter"><img class="image imagecenter" id="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__IMAGE_A886AA7AB6494483848AFEAE45FC22DE" src="mob_123.png"></div><br></figure> 
+	 </section><section class="section" id="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__SECTION_ABBCF6FB0E134EBDAF4A1A7E2FFEBA6A"><a name="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__SECTION_ABBCF6FB0E134EBDAF4A1A7E2FFEBA6A"><!-- --></a><h2 class="title sectiontitle">Option 2: Controller</h2>
+		
+		<p class="p text-center"><a class="xref btn" href="AR/Mob_124AR.html" target="_blank">Launch AR template</a> 
+		</p>
+		<figure class="fig fignone" id="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__FIG_4DBBCFD98C8B4B4F9E510490184343FE"><a name="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__FIG_4DBBCFD98C8B4B4F9E510490184343FE"><!-- --></a><br><a name="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__IMAGE_D7F639F85C1643D9980245B3146054F7"><!-- --></a><div class="imagecenter"><img class="image imagecenter" id="GUID-AFF08C40-F4A6-440C-8BB0-68A8F15FF3BA__IMAGE_D7F639F85C1643D9980245B3146054F7" src="mob_124.png"></div><br></figure> 
+		<p class="p">Option 3 (not shown): SAS Expander 
+		</p> 
+	 </section></div></article></main><script>
+            (function (document) {
+            'use strict';
+            var TableFilter = (function (Arr) {
+            var _input;
+
+            function
+            _onInputEvent(e) {
+            _input = e.target;
+            var tables =
+            document.getElementsByClassName(_input.getAttribute('data-table'));
+            Arr.forEach.call(tables, function (table) {
+            Arr.forEach.call(table.tBodies, function (tbody) {
+            Arr.forEach.call(tbody.rows, _filter);
+            }
+            );
+            });
+            }
+
+            function _filter(row) {
+            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+            row.style.display =
+            text.indexOf(val) === -1 ? 'none' : 'table-row';
+            }
+
+            return {
+            init: function () {
+            var inputs = document.getElementsByClassName('tableFilter');
+            Arr.forEach.call(inputs, function (input) {
+            input.oninput = _onInputEvent;
+            }
+            );
+            }
+            };
+            })(Array.prototype);
+            document.addEventListener('readystatechange', function () {
+            if
+            (document.readyState === 'complete') {
+            TableFilter.init();
+            }
+            });
+            })(document);
+        </script></body></html>
