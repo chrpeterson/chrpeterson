@@ -1,6 +1,5 @@
 <html lang="en-us">
 <head>
-  <meta name="viewport" content="width=device-width, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=11" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <!-- a-frame.js from https://aframe.io -->
@@ -21,52 +20,13 @@
       Position: absolute;
       Left: -9999px;
     }
-    
-    a-scene {
-    position: fixed;}
-    
-    a-marker-camera {
-    position: fixed;}
-    
   </style>
-  
-  
 <body style='margin : 0px; overflow: hidden;'>
- 
-  
-  
-  <div width=800 height=600 style="overflow:hidden;">
-    <!-- this doesn't have to be an image -->
-    <img id="torotate" class="diagram" width=800 height=600 src="Mob_121AR.png">
-</div>
-
-<script type="text/javascript" src="http://anitasv.github.io/zoom/zoom-1.0.7.min.js"> </script>
-  
-  
-  
-  
+  <p id="flex">
+    <img class="diagram" src="Mob_121AR.png">
+  </p>
   <a-scene embedded arjs>
     <a-marker></a-marker>
-   
   </a-scene>
-  
-  
-  <script>
-  var elem = document.getElementById('torotate');
-var zm = new Zoom(elem, {
-    rotate: true
-});
-  </script>
-  <script>
-  var zoom = require("zoom-it");
-var wnd = window; // Get this.
-
-var elem = document.getElementById('torotate');
-var zm = new zoom.Zoom(elem, {
-    rotate: true
-}, wnd);
-  </script>
-  
-  
 </body>
 </html>
