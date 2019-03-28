@@ -10,27 +10,13 @@
 		<!-- Link to main style sheet -->
 		<link rel="stylesheet" href="style.css">
         
-        <style>
- 
- 
-  <style>
-    #flex {
-      display: flex;
-      justify-content: center;
-    }
-    .diagram {
-      max-width: 80%;
-      position: absolute;
-      top: 0;
-    }
-  
-html, body{
+          <style>
+        html, body{
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
 }
-
 #camera, #camera--view, #camera--sensor, #camera--output{
     position: fixed;
     height: 100%;
@@ -38,10 +24,12 @@ html, body{
     object-fit: cover;
     z-index: -10;
 }
-
-
+	
+		
+		
 #camera--trigger{
     width: 200px;
+display: none;
     background-color: black;
     color: white;
     font-size: 16px;
@@ -54,7 +42,6 @@ html, body{
     bottom: 30px;
     left: calc(50% - 100px);
 }
-
 .taken{
     height: 100px!important;
     width: 100px!important;
@@ -65,9 +52,19 @@ html, body{
     right: 20px;
     z-index: 2;
 }
+            .image {
+                max-width: 80%;
+      		position: absolute;
+		top: 0;
+                z-index: 10;
+            }
 		
-		
-  </style>
+		#flex {
+      display: flex;
+      justify-content: center;
+    }
+        
+        </style>
 
 <body>
 
