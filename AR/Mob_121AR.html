@@ -1,6 +1,6 @@
-<html lang="en-us">
-<head>
-  	<meta charset="utf-8">
+<html lang=”en”>
+	<head>
+		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -10,7 +10,7 @@
 		<!-- Link to main style sheet -->
 		<link rel="stylesheet" href="style.css">
         
-          <style>
+        <style>
         html, body{
   margin: 0;
   padding: 0;
@@ -65,13 +65,14 @@ display: none;
     }
         
         </style>
-
-<body>
+	</head>
+	<body>
 
 		<!-- Camera -->
 		<main id="camera">
 
-		  
+		    <!-- Camera sensor -->
+		    <canvas id="camera--sensor"></canvas>
 		    
 		    <!-- Camera view -->
 		    <video id="camera--view" autoplay playsinline></video>
@@ -79,13 +80,17 @@ display: none;
 		    <!-- Camera output -->
 		    <img src="//:0" alt="" id="camera--output">
 
-             <img src="Mob_121AR.png" width="75%" class="image">
+            <p id="flex">
+            <img src="Mob_121AR.png" width="75%" class="image">
+		    <p>
+		   
+
+             <!-- Camera trigger -->
+		    <button id="camera--trigger">Take a picture</button>
             
-</main>
+		</main>
 
 		<!-- Reference to your JavaScript file -->
 		<script src="app.js"></script> 
 	</body>
-	
-	
 </html>
