@@ -9,88 +9,33 @@
 
 		<!-- Link to main style sheet -->
 		<link rel="stylesheet" href="style.css">
-        
-        <style>
-        html, body{
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-#camera, #camera--view, #camera--sensor, #camera--output{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -10;
-}
+		<link rel="stylesheet" href="arstyle.css">
+</head>
 	
-		
-		
-#camera--trigger{
-    width: 200px;
-display: none;
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    border-radius: 30px;
-    border: none;
-    padding: 15px 20px;
-    text-align: center;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-    position: fixed;
-    bottom: 30px;
-    left: calc(50% - 100px);
-}
-.taken{
-    height: 100px!important;
-    width: 100px!important;
-    transition: all 0.5s ease-in;
-    border: solid 3px white;
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
-    top: 20px;
-    right: 20px;
-    z-index: 2;
-}
-            .image {
-                max-width: 80%;
-      		position: absolute;
-		top: 0;
-                z-index: 10;
-            }
-		
-		#flex {
-      display: flex;
-      justify-content: center;
-    }
-        
-        </style>
-	</head>
-	<body>
+<body>
 
-		<!-- Camera -->
-		<main id="camera">
+<!-- Camera -->
+<main id="camera">
 
-		    <!-- Camera sensor -->
-		    <canvas id="camera--sensor"></canvas>
+<!-- Camera sensor -->
+<canvas id="camera--sensor"></canvas>
+
+<!-- Camera view -->
+<video id="camera--view" autoplay playsinline></video>
 		    
-		    <!-- Camera view -->
-		    <video id="camera--view" autoplay playsinline></video>
-		    
-		    <!-- Camera output -->
-		    <img src="//:0" alt="" id="camera--output">
+<!-- Camera output -->
+<img src="//:0" alt="" id="camera--output">
 
-            <p id="flex">
-            <img src="Mob_121AR.png" width="75%" class="image">
-		    <p>
+<p id="flex">
+<img src="Mob_121AR.png" width="75%" class="image">
+<p>
 		   
-
-             <!-- Camera trigger -->
-		    <button id="camera--trigger">Take a picture</button>
+<!-- Camera trigger -->
+<button id="camera--trigger">Take a picture</button>
             
-		</main>
+</main>
 
-		<!-- Reference to your JavaScript file -->
-		<script src="app.js"></script> 
+<!-- Reference to to initiate-camera.js -->
+<script src="initiate-camera.js"></script> 
 	</body>
 </html>
