@@ -1,35 +1,51 @@
-// Set constraints for the video stream
-var constraints = { video: { facingMode: "environment" }, audio: false };
-var track = null;
-
-// Define constants
-const cameraView = document.querySelector("#camera--view"),
-    cameraOutput = document.querySelector("#camera--output"),
-    cameraSensor = document.querySelector("#camera--sensor"),
-    cameraTrigger = document.querySelector("#camera--trigger");
-
-// Access the device camera and stream to cameraView
-function cameraStart() {
-    navigator.mediaDevices
-        .getUserMedia(constraints)
-        .then(function(stream) {
-            track = stream.getTracks()[0];
-            cameraView.srcObject = stream;
-        })
-        .catch(function(error) {
-            console.error("Oops. Something is broken.", error);
-        });
+function handleSuccess(stream) {
+  window.stream = stream; // make stream available to browser console
+  video.srcObject = stream;
 }
 
-// Take a picture when cameraTrigger is tapped
-cameraTrigger.onclick = function() {
-    cameraSensor.width = cameraView.videoWidth;
-    cameraSensor.height = cameraView.videoHeight;
-    cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
-    cameraOutput.src = cameraSensor.toDataURL("image/webp");
-    cameraOutput.classList.add("taken");
-    // track.stop();
-};
+function handleError(error) {
+  console.log('navigator.getUserMedia error: ', error);
+}
 
-// Start the video stream when the window loads
-window.addEventListener("load", cameraStart, false);
+var DEVICES = [];
+var final = null;
+navigator.mediaDevices.enumerateDevices()
+    .then(function(devices) {
+
+        var arrayLength = devices.length;
+        for (var i = 0; i < arrayLength; i++)
+        {
+            var tempDevice = devices[i];
+            //FOR EACH DEVICE, PUSH TO DEVICES LIST THOSE OF KIND VIDEOINPUT (cameras)
+            //AND IF THE CAMERA HAS THE RIGHT FACEMODE ASSING IT TO "final"
+            if (tempDevice.kind == "videoinput")
+            {
+                DEVICES.push(tempDevice);
+                if(tempDevice.facingMode == "environment" ||tempDevice.label.indexOf("facing back")>=0 )
+                    {final = tempDevice;}
+            }
+        }
+
+        var totalCameras = DEVICES.length;
+        //If couldnt find a suitable camera, pick the last one... you can change to what works for you
+        if(final == null)
+        {
+            //console.log("no suitable camera, getting the last one");
+            final = DEVICES[totalCameras-1];
+        };
+
+        //Set the constraints and call getUserMedia
+        var constraints = {
+        audio: false, 
+        video: {
+            deviceId: {exact: final.deviceId}
+            }
+        };
+
+        navigator.mediaDevices.getUserMedia(constraints).
+        then(handleSuccess).catch(handleError);
+
+    })
+    .catch(function(err) {
+        console.log(err.name + ": " + err.message);
+});
