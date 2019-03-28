@@ -57,9 +57,19 @@
     z-index: 2;
 }
             .image {
-                position: absolute;
+                max-width: 80%;
+      		position: absolute;
+		top: 0;
                 z-index: 10;
             }
+		
+		#flex {
+
+      display: flex;
+
+      justify-content: center;
+
+    }
         
         </style>
 	</head>
@@ -77,8 +87,9 @@
 		    <!-- Camera output -->
 		    <img src="//:0" alt="" id="camera--output">
 
-            
+            <p id="flex">
             <img src="Mob_121AR.png" width="75%" class="image">
+		    <p>
 		    <!-- Camera trigger -->
 		    <button id="camera--trigger">Take a picture</button>
 
