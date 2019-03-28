@@ -11,9 +11,8 @@
 		<link rel="stylesheet" href="style.css">
         
         <style>
-  <script src="app.js"></script>
-  <!-- a-frame.ar.js from https://jeromeetienne.github.io/ -->
-  <script src="aframe-ar.js"></script>
+ 
+ 
   <style>
     #flex {
       display: flex;
@@ -24,16 +23,76 @@
       position: absolute;
       top: 0;
     }
-    #arjsDebugUIContainer, .a-enter-vr.embedded {
-      display: none;
-    }
+  
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#camera, #camera--view, #camera--sensor, #camera--output{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -10;
+}
+
+#camera--view, #camera--sensor, #camera--output{
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+
+#camera--trigger{
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 100px);
+}
+
+.taken{
+    height: 100px!important;
+    width: 100px!important;
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+		
+		
   </style>
-<body style='margin : 0px; overflow: hidden;'>
-  <p id="flex">
-    <img class="diagram" src="Mob_121AR.png">
-  </p>
-  <a-scene embedded arjs>
-    <a-marker-camera></a-marker-camera>
-  </a-scene>
-</body>
+
+<body>
+
+		<!-- Camera -->
+		<main id="camera">
+
+		  
+		    
+		    <!-- Camera view -->
+		    <video id="camera--view" autoplay playsinline></video>
+		    
+		    <!-- Camera output -->
+		    <img src="//:0" alt="" id="camera--output">
+
+             <img src="Moab_121-AR.png" width="75%" class="image">
+            
+</main>
+
+		<!-- Reference to your JavaScript file -->
+		<script src="app.js"></script> 
+	</body>
+	
+	
 </html>
