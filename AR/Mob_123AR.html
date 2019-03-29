@@ -1,34 +1,42 @@
-<html lang="en-us">
+<html lang=”en”>
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=11" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- a-frame.js from https://aframe.io -->
-	<script src="aframe.min.js"></script>
-	<!-- a-frame.ar.js from https://jeromeetienne.github.io/ -->
-	<script src="aframe-ar.js"></script>
-  <style>
-    #flex {
-      display: flex;
-      justify-content: center;
-    }
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    .diagram {
-      max-width: 80%;
-      position: absolute;
-      top: 0;
-    }
+		
+<title>Option 1: System board</title>
 
-    #arjsDebugUIContainer, .a-enter-vr.embedded {
-      Position: absolute;
-      Left: -9999px;
-    }
-  </style>
-<body style='margin : 0px; overflow: hidden;'>
-  <p id="flex">
-    <img class="diagram" src="Mob_123AR.png">
-  </p>
-  <a-scene embedded arjs>
-    <a-marker-camera></a-marker-camera>
-  </a-scene>
+		
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="arstyle.css">
+		
+</head>
+	
+<style>
+	
+#camera--view {
+resize: none;}
+		
+</style>
+	
+<body>
+
+<main id="camera">
+
+<canvas id="camera--sensor"></canvas>
+
+<video id="camera--view" autoplay playsinline></video>
+		    
+<img src="//:0" alt="" id="camera--output">
+
+<p id="flex">
+<img src="Mob_123AR.png" width="80%" class="image">
+<p>
+	
+</main>
+
+<script src="initiate-camera.js"></script> 
+	
 </body>
 </html>
