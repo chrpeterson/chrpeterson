@@ -2,8 +2,11 @@
   SYSTEM "about:legacy-compat">
 <html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="copyright" content="© Copyright ,  Hewlett Packard Enterprise Development LP"><link rel="stylesheet" type="text/css" href="hpefonts.css"><link rel="stylesheet" type="text/css" href="style.css"><title>Cable routing: Front 2SFF drive option for SFF</title></head><body id="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07"><a name="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07"><!-- --></a><main role="main"><article role="article" aria-labelledby="ariaid-title1"><h1 class="title topictitle1" id="ariaid-title1">Cable routing: Front 2SFF drive option for SFF</h1><div class="body refbody"><section class="section" id="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07__SECTION_A9A8D103DB1D4A6CA4BF6F485EAFAEED"><a name="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07__SECTION_A9A8D103DB1D4A6CA4BF6F485EAFAEED"><!-- --></a> 
 		<div class="p"> 
-		  <div style="width:100%; margin-top:1em"></div><div class="notetitle"></div><div class="note note"><span style="font-weight:bold">NOTE: </span><p class="p">Some images can launch an augmented reality (AR) view. The browser uses the device's camera to overlay the cable diagram so you can verify the cable route. 
-		</p></div> 
+		  <div style="width:100%; margin-top:1em"></div><div class="notetitle"></div>
+			<div class="note note"><span style="font-weight:bold">NOTE: </span>
+			<p class="p">Some images can launch an augmented reality (AR) view. 
+			The browser uses the device's camera to overlay the cable diagram so you can verify the cable route.</p>
+				<p>For more information, see <a href="/AR/howto.html">How to use the AR template</a></p></div> 
 		</div>
 	 </section><section class="section" id="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07__SECTION_BC0F9C992B6B48C88827627BA8077512"><a name="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07__SECTION_BC0F9C992B6B48C88827627BA8077512"><!-- --></a><h2 class="title sectiontitle">Option 1: System board</h2>
 		
@@ -17,46 +20,4 @@
 		<figure class="fig fignone" id="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07__FIG_5793D934B6604B8281BF2CFF66DD3166"><a name="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07__FIG_5793D934B6604B8281BF2CFF66DD3166"><!-- --></a><br><a name="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07__IMAGE_A322BB5CCBA34D589A045C2001BD305E"><!-- --></a><div class="imagecenter"><img class="image imagecenter" id="GUID-76C9E454-E5AA-4A65-BA5E-132A7D306E07__IMAGE_A322BB5CCBA34D589A045C2001BD305E" src="mob_122.png"></div><br></figure> 
 		<p class="p">Option 3 (not shown): A controller
 		</p> 
-	 </section></div></article></main><script>
-            (function (document) {
-            'use strict';
-            var TableFilter = (function (Arr) {
-            var _input;
-
-            function
-            _onInputEvent(e) {
-            _input = e.target;
-            var tables =
-            document.getElementsByClassName(_input.getAttribute('data-table'));
-            Arr.forEach.call(tables, function (table) {
-            Arr.forEach.call(table.tBodies, function (tbody) {
-            Arr.forEach.call(tbody.rows, _filter);
-            }
-            );
-            });
-            }
-
-            function _filter(row) {
-            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
-            row.style.display =
-            text.indexOf(val) === -1 ? 'none' : 'table-row';
-            }
-
-            return {
-            init: function () {
-            var inputs = document.getElementsByClassName('tableFilter');
-            Arr.forEach.call(inputs, function (input) {
-            input.oninput = _onInputEvent;
-            }
-            );
-            }
-            };
-            })(Array.prototype);
-            document.addEventListener('readystatechange', function () {
-            if
-            (document.readyState === 'complete') {
-            TableFilter.init();
-            }
-            });
-            })(document);
-        </script></body></html>
+	 </section></div></article></main></body></html>
