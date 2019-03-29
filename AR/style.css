@@ -1,0 +1,643 @@
+/*
+Hewlett-Packard Company
+Copyright 2015, 2016, 2017 Hewlett Packard Enterprise Development LP
+Written for Hewlett Packard Enterprise, Knowledge Management
+
+===========
+TOC
+===========
+Color palette
+Fonts
+CSS reset (normalize.css)
+Standard body stuff
+Block elements
+Inline elements
+Tables
+
+===========
+Color palette
+===========
+Primary
+#01A982 - HPE green
+#000000 - Font color
+#FFFFFF - Background
+
+Secondary
+Neutrals
+#425563 - HPE Slate
+#5F7A76 - HPE Dark Steel
+#80746E - HPE Bronze
+#C6C9CA - HPE Gray 1
+Vibrants
+#2AD2C9 - HPE Turquouise
+#FF8D6D - HPE Orange
+#614767 - HPE Purple
+*/
+@font-face {
+    font-family: "Metric";
+    src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Metric";
+    font-weight: 700;
+    src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Bold.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Metric";
+    font-weight: 600;
+    src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Semibold.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Metric";
+    font-weight: 100;
+    src: url(https://hpefonts.s3.amazonaws.com/MetricWeb-Light.woff) format("woff");
+}
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}html{font-family:"Metric";-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} menu,article,aside,details,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,optgroup,select,textarea{font-family:"Metric";font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+
+/* Reset tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,td {
+    text-align: left;
+    font-weight: inherit;
+}
+
+/* Reset list styles */
+main ol,main ul {
+    list-style: none;
+}
+/* Prevent font scaling in landscape */
+html {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+/* Hide hr artefacts */
+hr {
+	display:none;
+}
+html:lang(en-us) {
+	font-family: "Metric", Arial, "Metric";
+}
+
+/* Always show scrollbar */
+html, body {
+	height: 101%;
+}
+/* Body stuff */
+body {
+	background-color: #ffffff !important;
+	font-size: 100%;
+	display: block;
+	font-family: inherit;
+	color:#333;
+}
+main {
+	font-family: "Metric", Arial, "Metric";
+	font-size:inherit;
+	display:block;
+	margin:0 auto;
+	width: 1000px;
+	padding: 1em 0;
+}
+@media all and (max-width:1020px) {
+    main, header, footer {
+        width: 96% !important;
+        margin: 0 2% !important;
+    }
+}
+code, kbd, pre, samp, .pre, .codeblock, .codephrase {
+	font-family:"Courier New", monospace !important;
+    font-size: 13px;
+	color: inherit;
+    background-color: inherit;
+    vertical-align: baseline;
+	white-space: pre-wrap;
+}
+.codeblock {
+  display: block;
+  background-color: #eee;
+  border-radius: 7px;
+  padding: 12px;
+}
+kbd.userinput {
+	font-weight:900;
+}
+.uicontrol, .dt, .menucascade {
+  font-weight: 600;
+}
+sup {
+    font-size: 15px;
+	top: -0.4em;
+	line-height: 0;
+	position:relative;
+	vertical-align:baseline;
+	margin-left:3px;
+}
+strong {
+	font-weight:600;
+}
+div[style] {
+  border-bottom: 0.25pt solid white !important;
+}
+/* Font scaling @grommet.github.io/hpe/docs/typography */
+main {
+  font-size: 1em;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */
+  color:#333;
+  font-weight:100;
+}
+@media (min-width: 43.75em) {
+  main {
+    font-size: 1em;
+    /* equivalent to 16px */
+    line-height: 1.375;
+    /* equivalent to 22px */
+  }
+}
+h1 {
+  font-size: 2em;
+  /* 2x body copy size = 32px */
+  line-height: 1.125;
+  /* 45px / 36px */
+  margin: 0 0 12px 0;
+}
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 2.2em;
+    /* 2.2x body copy size = 35px */
+    line-height: 1.125;
+  }
+}
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 3em;
+    /* 3x body copy size = 48px */
+    line-height: 1.125;
+    /* keep to a multiple of the 20px line height 
+    and something more appropriate for display headings */
+  }
+}
+h2, .prereq_statement, .sectiontitle {
+  font-size: 1.625em;
+  /* 1.625x body copy size = 26px */
+  line-height: 1.15384615;
+  /* 30px / 26px */
+  margin: 0 0 12px 0;
+}
+
+@media (min-width: 43.75em) {
+  h2, .prereq_statement, .sectiontitle {
+    font-size: 1.8em;
+    /* 2x body copy size = 32px */
+    line-height: 1.23;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h2, .prereq_statement, .sectiontitle {
+    font-size: 2.25em;
+    /* 2.25x body copy size = 36px */
+    line-height: 1.23;
+  }
+}
+h3 {
+  font-size: 1.375em;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.13636364;
+  /* 25px / 22px */
+  margin: 0 0 12px 0;
+}
+
+@media (min-width: 43.75em) {
+  h3 {
+    font-size: 1.5em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h3 {
+    font-size: 1.75em;
+    /* 1.75x body copy size = 28px */
+    line-height: 1.25;
+  }
+}
+
+
+/* Links */
+main a[target="_blank"]:link,main a[target="_blank"]:hover,main a[target="_blank"]:active,main a[target="_blank"]:visited {
+	color: #000 !important;
+	font-size: 1em;
+    line-height: 22px;
+	text-decoration: underline !important;
+	font-weight: 700;
+}
+main a.xref:link,main a.xref:visited,main a sup {
+    color: #01B187;
+    text-decoration: none;
+}
+main a.xref:hover {
+    text-decoration: underline;
+}
+main a.xref:active {
+    text-decoration: none;
+}
+.fn a,a.fn:link,a.fn:hover,a.fn:active,a.fn:visited, #endnotes a {
+	text-decoration:none;
+}
+a.fn {
+    color: black;
+    text-decoration: none;
+}
+a.fn:focus {
+    outline:0;
+}
+main li a[name].fn {
+    display: initial;
+}
+a[href^="MAILTO"] {
+  color: #333 !important;
+  font-weight: 700;
+  text-decoration: underline !important;
+}
+/* Lists */
+main ul {
+	list-style-type: Disc !important;
+    list-style-image: none !important;
+    list-style-position: outside !important;
+    margin: 0 0 1em 16px !important;
+	padding: 0 !important;
+}
+main li {
+    font-family: inherit;
+    font-size: inherit;
+	font-weight: inherit;
+    line-height: 22px !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+main li p {
+	margin:0px;
+}
+main ol {
+    list-style-position: outside;
+    list-style-type: decimal;
+    margin: 0 0 0 16px;
+    padding: 0;
+}
+main.ol[type="a"], .li.substep {
+    list-style-position: outside;
+    list-style-type: lower-alpha;
+    margin: 0 0 0 0 !important;
+    padding: 0;
+}
+main ol li ol {
+	margin: 0 0 0 14px;
+}
+main li ul {
+	list-style: circle !important;
+	margin: 0 0 0 16px !important;
+	padding:0;
+}
+main li ul li ul {
+	list-style-type: '- ' !important;
+}
+main li a[name] {
+	display:none;
+}
+main li a.xref {
+	display:inline;
+}
+main li a[name] {
+	display:none;
+}
+main li .info p {
+	margin-top:0px;
+}
+main li table {
+	margin-top: 16px;
+}
+
+/* Checklist */
+main ul.checklist {
+  list-style-type: none !important;
+  margin: 0 0 0 14px !important;
+}
+
+main ul.checklist li::before {
+  border: 1px solid #666;
+  content: "";
+  display: block;
+  float: left;
+  margin: 5px;
+  padding: 5px;
+}
+
+/* Tables */
+#tablecaption {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 1em 0 0 0;
+}
+tr:hover {
+    background-color: #eee;
+}
+td p {
+	margin: 5px 0;
+}
+th.entry {
+	border-top: 3px solid #01A982;
+	border-right: none;
+	border-bottom: 3px solid #01A982;
+	border-left: none;
+}
+thead tr th {
+	font-weight:700;
+}
+td.entry {
+	border-top: 1px solid #C6C9CA;
+	border-right:none;
+	border-bottom: 1px solid #C6C9CA;
+	border-left:none;
+}
+table,.table,.tablenoborder {
+    border:0!important;
+	max-width: 100% !important;
+    width: auto;
+	padding-bottom:2em;
+}
+
+/* Alerts and notes */
+.note {
+	width: 600px;
+	margin:0.8em 10px;
+	padding: 5px 0;
+	border-top: 2px solid #01A982;
+	border-bottom: 2px solid #01A982;
+}
+.note:hover {
+	background-color: #eee;
+}
+.note p {
+	display:inline;
+}
+table[frame="hsides"] {
+	width: 700px !important;
+	margin:0.8em 10px;
+	padding: 5px 0;
+}
+table[frame="hsides"] td {
+	border-top: 2px solid #01A982 !important;
+	border-bottom: 2px solid #01A982 !important;
+}
+@media all and (max-width:670px) {
+    .note,table[frame="hsides"] {
+        width: 96% !important;
+    }
+}
+
+/* Images and media */
+img,video {
+    max-width: 100% !important;
+	height:auto;
+}
+@media all and (max-width:675px) {
+    figure {
+        margin: 0;
+    }
+}
+div.imageright {
+	text-align:right;
+}
+div.imageleft {
+	text-align:left;
+}
+div.imagecenter {
+	text-align:center;
+}
+section:last-of-type {
+	margin-bottom: 30px;
+}
+
+/* Media queries and layout */
+@media all and (max-width:1020px) {
+    .masterbanner, .subtitle, .abstract, .desc, .pubsnumber, .publishedDate, .edition, .copyright, .toc {
+        width: 96% !important;
+        margin: 0 2% !important;
+    }
+}
+.masterbanner, .subtitle, .toc, .abstract, .desc, .pubsnumber, .publishedDate, .edition, .copyright {
+	display:block;
+	margin:0 auto;
+	width: 1000px;
+}
+
+.masterbanner {
+  padding-bottom: 0.67em;
+}
+.toc {
+  padding-top: 0.67em;
+}
+.toc::before {
+  color: inherit;
+  content: "Contents";
+  font-size: 2.815em;
+  font-weight: 700;
+  margin-top: 40px;
+}
+.toc ul, .topicref {
+  list-style: outside none none;
+}
+ul.map, ul.bookmap {
+  padding-left: 0px;
+}
+.topicref a {
+  color: #01a982;
+  text-decoration: none;
+}
+.abstract {
+  font-weight:700;
+}
+.desc {
+  padding-bottom: 0.67em;
+}
+.copyright {
+  padding-top: 0.67em;
+}
+/* Navigation arrows */
+header {
+  width:1000px;
+  margin: 0 auto;
+}
+table.header {
+  margin-top: 20px;
+  width:100%;
+}
+.navheader_label img {
+  width: 20px;
+}
+header td.prev {
+  text-align: left;
+  width: 50%;
+}
+header td.next {
+  text-align: right;
+  width: 50%;
+}
+footer {
+  width:1000px;
+  margin: 0 auto;
+}
+table.footer {
+  margin-bottom: 20px;
+  width:100%;
+}
+.navfooter_label img {
+  width: 20px;
+}
+footer td.prev {
+  text-align: left;
+  width: 40%;
+}
+footer td.next {
+  text-align: right;
+  width: 40%;
+}
+footer td.home {
+  text-align: center;
+  width: 20%;
+}
+header tr:hover, footer tr:hover {
+  background-color:#fff;
+}
+/* Troubleshooting topics */
+.troubleshootingdefaulttext {
+  font-weight: 700;
+}
+.troubleSolution section {
+  margin-left: 0.5em;
+}
+.condition p {
+  margin-left: 0.5em;
+}
+div[style^="width:100%"] {
+  margin: 0 !important;
+}
+      
+.select {
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  font-weight: 700;
+  margin-right: 10px;
+  font-family:  "Metric";
+  font-size:  11pt;
+  width: 300px;
+}
+
+option {
+    font-size: 10pt;
+    font-family: "Metric";
+}
+
+table {
+  border-collapse: collapse;
+}
+        
+.printbtn {
+  text-decoration: none;
+  color: white;
+  font-size: 10pt;
+    position: relative;
+    display: inline-block;
+  border-style: #01A982;
+  border-color: #01A982;
+  padding: 5px 20px 5px 20px;
+  background-color: #01A982;
+    margin-left: 45px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  
+    
+}
+
+/*@media print{
+  .footer { display:none; }
+  .header{display: none;}
+  .refbody{display: none;}
+  .topstuff{display: none;}
+}*/
+
+.exportbtn{
+  text-decoration: none;
+  color: white;
+  font-size: 10pt;
+  border-style: #01A982;
+  border-color: #01A982;
+  padding: 5px 20px 5px 20px;
+  background-color: #01A982;
+    float: left;
+             position: relative;
+             margin-left: 45px;
+             margin-bottom: 10px;
+             margin-top: 10px;
+             
+}
+
+td, th {
+  width: 150px;
+  font-size: 11pt;
+}
+
+input {
+    
+    width: 200px;
+      font-size: 11pt;
+    font-family: "Metric";
+    
+}
+
+
+#searchicon {
+    width: 30px;
+    padding-left: 10px;
+}
+
+     
+
+.toolstable {
+   
+    margin-top: -10px;
+    margin-bottom: -20px;
+}
+
+td.tablefunctions, td.selectorone, td.selectortwo {
+    border-style: none !important;
+
+
+    }
+
+#one, #two {
+    padding: 5px;
+}
+
+.toolstable {
+    height: 150px !important;
+    
+}
+
+.selectorone, .selectortwo {
+            padding-top: 60px !important;
+            font-size: 1em;
+        }
