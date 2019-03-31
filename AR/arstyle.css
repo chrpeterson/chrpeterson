@@ -16,7 +16,7 @@ z-index: -10;
 
 
 .image {
-max-width: 60%;
+max-width: 60vw;
 position: absolute;
 top: 0;
 z-index: 10;
