@@ -17,6 +17,7 @@ z-index: -10;
 
 .image {
 width: 60vw;
+  margin-top: 10%;
 position: absolute;
 top: 0;
 z-index: 10;
